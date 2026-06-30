@@ -1,0 +1,47 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================
+# Jupyter Notebook
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+
+# ==========================
+# Temporary / Local Files
+# ==========================
+.virtual_documents/
+anaconda_projects/
+results/
+test_model.py
+
+# ==========================
+# Environment Files
+# ==========================
+.env
+.venv/
+venv/
+
+
+# ==========================
+# AI Model Files
+# ==========================
+saved_summary_model/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+samsum-train.csv
+samsum-test.csv
+samsum-validation.csv
