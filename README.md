@@ -1,124 +1,75 @@
 # 📝 Summarizer Using Hugging Face
 
-> AI-Powered Text Summarization using Transformers and Hugging Face 🤖
-
----
-
-## 📌 Project Overview
-
-This project is an NLP-based Text Summarization System developed using Hugging Face Transformers.
-
-The application can summarize long conversations, articles, meeting notes, or paragraphs into short and meaningful summaries while preserving the key information.
-
-The project demonstrates the practical implementation of Transformer models in Natural Language Processing (NLP).
+An AI-powered text summarization application that generates concise summaries from long conversations using a fine-tuned **T5-small Transformer** model. The application provides a simple web interface built with **FastAPI** where users can paste lengthy dialogues and receive meaningful summaries in seconds.
 
 ---
 
 ## 🚀 Features
 
-- 📄 Summarize long conversations
-- 🤖 Transformer-based NLP Model
-- ⚡ Fast inference using Hugging Face
-- 🎨 Interactive Frontend
-- 📱 User-friendly Interface
-- 📝 Supports long text input
-- 🔍 Generates meaningful summaries
+- Fine-tuned **T5-small** model for dialogue summarization
+- FastAPI backend for inference
+- Simple HTML/CSS frontend
+- Text preprocessing using Regular Expressions
+- Beam Search decoding for better summaries
+- GPU (CUDA) support for faster inference
+- Clean and responsive user interface
 
 ---
 
-## 🧠 Technologies Used
+## 🛠️ Tech Stack
 
 - Python
+- FastAPI
 - Hugging Face Transformers
 - PyTorch
-- Streamlit / Flask
 - HTML
 - CSS
 - JavaScript
+- Jinja2
+- SentencePiece
 
 ---
 
-## ⚙️ Working Flow
+## 🧠 Model Information
 
-```
-User Input
-      │
-      ▼
-Text Preprocessing
-      │
-      ▼
-Hugging Face Transformer
-      │
-      ▼
-Generate Summary
-      │
-      ▼
-Display Summary
-```
+| Property | Value |
+|----------|-------|
+| Model | T5-small |
+| Task | Dialogue Summarization |
+| Dataset | SAMSum |
+| Framework | Hugging Face Transformers |
+| Backend | FastAPI |
+| Inference | Beam Search |
 
 ---
 
-## 🏗️ Project Architecture
+## 📂 Project Structure
 
 ```
-                +------------------+
-                |     User Input   |
-                +---------+--------+
-                          |
-                          ▼
-                +------------------+
-                | Text Processing  |
-                +---------+--------+
-                          |
-                          ▼
-          +------------------------------+
-          | Hugging Face Transformer     |
-          | (Pre-trained NLP Model)      |
-          +--------------+---------------+
-                         |
-                         ▼
-               +------------------+
-               | Summary Output   |
-               +------------------+
+Summarizer-Using-Hugging-Face/
+│
+├── app.py
+├── index.html
+├── text_summarizer.ipynb
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-## 🧠 Transformer Workflow
-
-```
-Input Text
-    │
-    ▼
-Tokenizer
-    │
-    ▼
-Transformer Encoder
-    │
-    ▼
-Attention Mechanism
-    │
-    ▼
-Decoder
-    │
-    ▼
-Generated Summary
-```
-
----
-
-## 📦 Installation
+## ⚙️ Installation
 
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/Summarizer-Using-HuggingFace.git
+git clone <repository-url>
 ```
 
-Move to project directory
+Move into the project
 
 ```bash
-cd Summarizer-Using-HuggingFace
+cd Summarizer-Using-Hugging-Face
 ```
 
 Install dependencies
@@ -127,77 +78,67 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run
+Run the FastAPI server
 
 ```bash
-python app.py
+python -m uvicorn app:app
+```
+
+Open your browser
+
+```
+http://127.0.0.1:8000
 ```
 
 ---
 
-## 📸 Project Screenshots
+## 📊 Dataset
 
-### 🏠 Home Page
-
-<img src="assets/home.png" width="700">
+The model is fine-tuned using the **SAMSum Dataset**, which contains real-world conversations between people and corresponding human-written summaries.
 
 ---
 
-### 📄 Input Conversation
+## 💻 Workflow
 
-<img src="assets/input.png" width="700">
-
----
-
-### 📝 Generated Summary
-
-<img src="assets/output.png" width="700">
-
----
-
-## 🎯 Future Improvements
-
-- Multiple Language Support
-- PDF Summarization
-- YouTube Video Summarization
-- Voice Conversation Summarization
-- Meeting Notes Summarizer
-- Real-time Chat Summarizer
-- LLM Integration
-- Export Summary as PDF
-
----
-
-## 📚 Learning Outcomes
-
-✔ Hugging Face Transformers
-
-✔ Natural Language Processing
-
-✔ Transformer Architecture
-
-✔ Text Tokenization
-
-✔ Model Inference
-
-✔ Frontend Integration
-
-✔ API Integration
-
-✔ AI Project Deployment
+```
+User Input
+      │
+      ▼
+Text Cleaning
+      │
+      ▼
+Tokenization
+      │
+      ▼
+Fine-tuned T5-small
+      │
+      ▼
+Summary Generation
+      │
+      ▼
+Decoded Summary
+      │
+      ▼
+Frontend Output
+```
 
 ---
 
-## ⭐ Applications
+## 📸 Application Preview
 
-- Meeting Summary
-- Chat Summary
-- Customer Support
-- Healthcare Notes
-- Educational Content
-- News Summarization
-- Research Paper Summary
-- Legal Document Summary
+> Add screenshots here after deployment.
+
+---
+
+## 📈 Future Improvements
+
+- PDF summarization
+- Document summarization
+- Adjustable summary length
+- User authentication
+- Docker deployment
+- Cloud deployment
+- REST API documentation
 
 ---
 
@@ -205,12 +146,14 @@ python app.py
 
 **Aakash Sambhaji Thakare**
 
-Artificial Intelligence & Data Science Student
-
-Passionate about AI, Machine Learning, Deep Learning, Reinforcement Learning, NLP, and Generative AI.
+Artificial Intelligence & Data Science Engineering Student
 
 ---
 
-## 🌟 If you like this project
+⭐ If you found this project useful, consider giving it a star.
 
-Give this repository a ⭐ on GitHub.
+---
+
+### 📄 Generated Summary
+
+![Output](images/Banner.png)
