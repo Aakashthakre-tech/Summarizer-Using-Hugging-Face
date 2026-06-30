@@ -156,4 +156,4 @@ Artificial Intelligence & Data Science Engineering Student
 
 ### 📄 Generated Summary
 
-![Output](images/Banner.png)
+![Output](Images/Banner.png)
